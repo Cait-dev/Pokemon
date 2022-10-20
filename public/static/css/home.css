@@ -1,0 +1,171 @@
+html {
+    min-height: 100%;
+    position: relative;
+  }
+body{
+    margin: 0;
+    background-color: rgb(185, 215, 252);
+    font-family: 'Rubik', sans-serif;
+    margin-bottom: 40px;
+    
+}
+
+header{
+    display: flex;
+    min-height: 70px;
+    background-color: coral;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+nav a{
+    font-weight: 600;
+    padding-right: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+nav a:hover{
+    color: #fff;
+}
+h1{
+    text-align: center;
+    color: #FEFEDF;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}  
+.generacion1{
+    width: 1200px;
+    height: 300px;
+    letter-spacing: 4px;
+    background-image: linear-gradient(to left, #ff7f50, #fd894c, #fb924a, #f89b48, #f5a448);
+    border-radius: 45px;
+    overflow: hidden;
+    position: relative;
+}
+.generacion1 .char{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 50px;
+    left: 1000px;
+}
+
+
+.generacion2{
+    width: 1200px;
+    height: 300px;
+    letter-spacing: 4px;
+    background-image: linear-gradient(to right, #b6ffa0, #97ee9d, #79dd9a, #5bcc96, #3cba92);
+    border-radius: 45px;
+    overflow: hidden;
+    position: relative;
+}
+
+.generacion2 .chiko{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 50px;
+    left: 1000px;
+    
+}
+
+
+.generacion3{
+    width: 1200px;
+    height: 300px;
+    letter-spacing: 4px;
+    background-image: linear-gradient(to left, #004799, #0e52a2, #1a5cac, #2567b5, #2f72be);
+    border-radius: 45px;
+    overflow: hidden;
+    position: relative;
+}
+
+.generacion3 .mud{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 50px;
+    left: 1000px;
+}
+
+
+#btn {
+    background-color: black;
+    padding: 10px;
+    color: #fff;
+    border-radius: 23px;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 600;
+    position: relative;
+    left: 500px;
+}
+
+#btn:hover{
+    background-color: #fff;
+    color: black;
+}
+
+.title1{
+    background-color: transparent;
+    text-align: center;
+    color: black;
+    font-size: 32px;
+    font-weight: 600;
+    padding: 10px;
+    position: relative;
+    left: 500px;
+    width: 200px;
+    border-radius: 6px;
+}
+.title2{
+    background-color: transparent;
+    text-align: center;
+    color: black;
+    font-size: 32px;
+    font-weight: 600;
+    padding: 10px;
+    position: relative;
+    left: 500px;
+    width: 200px;
+    border-radius: 6px;
+}
+.title3{
+    background-color: transparent;
+    text-align: center;
+    color: black;
+    font-size: 32px;
+    font-weight: 600;
+    padding: 10px;
+    position: relative;
+    left: 500px;
+    width: 200px;
+    border-radius: 6px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 99.7%;
+    text-align: center;
+    padding: 3px;
+    background-image: linear-gradient(to left, #b5d3ff, #9dc2ff, #89b1ff, #789fff, #6b8cff);
+    color: white;
+  }
+
+@media (max-width:700px){
+    header{
+        flex-direction: column;
+    }
+    nav{
+        padding: 10px 0px;
+    }
+}

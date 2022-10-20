@@ -1,0 +1,95 @@
+body{
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+    background-image: linear-gradient(to top, #30cfd0, #00a4ca, #0076bc, #00469c, #330867);
+    text-align: center;
+}
+body:focus {
+    outline: none;
+  }
+
+header{
+    display: flex;
+    min-height: 70px;
+    background-image: linear-gradient(to left, #b5d3ff, #9dc2ff, #89b1ff, #789fff, #6b8cff);
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+nav a{
+    font-weight: 600;
+    padding-right: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+nav a:hover{
+    color: #fff;
+}
+
+h1{
+    padding: 10px;
+    color: #fff;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 90px;
+    margin-top: 20px;
+}
+.card{
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+    border-radius: 12px;
+}
+
+.card .title{
+    position: relative;
+    text-align: center;
+    font-size: 32px;
+    margin: 0;
+    font-weight: 600;
+    color: #00a4ca;
+    top: -200px;
+}
+
+.card span{
+    position: relative;
+    font-size: 18px;
+    margin: 0;
+    font-weight: 600;
+    color: #033f49;
+}
+
+.card .img {
+    max-width: 400px;
+    max-height: 400px;
+    position: relative;
+    top: 50px;
+    background-position: center;
+}
+
+footer {
+    position: absolute;
+    width: 99.7%;
+    left: 0px;
+    bottom: 0px;
+    text-align: center;
+    padding: 3px;
+    background-image: linear-gradient(to left, #b5d3ff, #9dc2ff, #89b1ff, #789fff, #6b8cff);
+    color: white;
+  }
+@media (max-width:700px){
+    header{
+        flex-direction: column;
+    }
+    nav{
+        padding: 10px 0px;
+    }
+}
