@@ -54,11 +54,6 @@ nav a:hover{
     box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
   }
   
-  .img-container {
-    background-image: url("./blob.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-  }
   
   .pokemon-block p {
     margin: 5px;
@@ -85,9 +80,34 @@ nav a:hover{
     height: 100%;
     backface-visibility: hidden;
   }
-  
+
+  .pagination{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    background-color: transparent;
+  }
+
+  .page-link {
+    background-image: linear-gradient(to right, #a1c6ff, #94bfff, #86b8ff, #77b1ff, #67aaff);
+    padding: 10px;
+    color: black;
+    border-radius: 23px;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 600;
+    position: relative;
+}
+
+.page-link:hover{
+  font-size: 25px;
+  background-image: linear-gradient(to left, #64c0b7, #75cdc5, #85dbd2, #96e8e0, #a6f6ee);
+}
+
+
 footer {
-    position: absolute;
+    position: fixed;
     width: 99.7%;
     left: 0px;
     bottom: 0px;

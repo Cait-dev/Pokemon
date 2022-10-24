@@ -1,16 +1,42 @@
 const pokemonContainer = document.querySelector('.pokemon-container')
+const previous = document.querySelector('#previous')
+const next = document.querySelector('#next')
 
 
-function fetchPokemon(id) {
-    fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
-    .then((res) => res.json())
-    .then((data) => {
-        createPokemon(data);
+let offset = 1
+let limit = 8
+
+previous.addEventListener("click", () => {
+    if(offset != 1){
+        offset -= 9;
+        removeChildNodes(pokemonContainer)
+        fetchPokemons(offset, limit);
+    }
+})
+
+next.addEventListener("click", () => {
+    if(offset < 145){
+        offset += 9;
+        removeChildNodes(pokemonContainer)
+        fetchPokemons(offset, limit);
+    }
     })
-}
 
-function fetchPokemons(number){
-    for (let i = 1; i <= number; i++){
+const fetchPokemon = async (id) => {
+    if (id < 152){
+        try{
+            const url = `https://pokeapi.co/api/v2/pokemon/${id}/`;
+            const res = await fetch(url);
+            const datos = await res.json();
+            const poke = await createPokemon(datos)
+        } catch(err) {
+            console.log(err)
+        }
+    }
+  };
+
+function fetchPokemons(offset, limit){
+    for (let i = offset; i <= offset + limit; i++){
         fetchPokemon(i)
     }
 }
@@ -43,4 +69,10 @@ function createPokemon(pokemon){
 
 }
 
-fetchPokemons(9);
+function removeChildNodes(parent) {
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+    }
+}
+
+fetchPokemons(offset, limit);

@@ -7,7 +7,7 @@ body{
     background-color: rgb(185, 215, 252);
     font-family: 'Rubik', sans-serif;
     margin-bottom: 40px;
-    
+    text-align: center;
 }
 
 header{
@@ -29,9 +29,9 @@ nav a{
 nav a:hover{
     color: #fff;
 }
-h1{
+.pokefont{
     text-align: center;
-    color: #FEFEDF;
+    align-items: center;
 }
 .container{
     display: flex;
@@ -98,7 +98,7 @@ h1{
 
 
 #btn {
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     padding: 10px;
     color: #fff;
     border-radius: 23px;
@@ -106,7 +106,6 @@ h1{
     font-size: 24px;
     font-weight: 600;
     position: relative;
-    left: 500px;
 }
 
 #btn:hover{
