@@ -3,11 +3,11 @@ const previous = document.querySelector('#previous')
 const next = document.querySelector('#next')
 
 
-let offset = 1
+let offset = 152
 let limit = 8
 
 previous.addEventListener("click", () => {
-    if(offset != 1){
+    if(offset != 152){
         offset -= 9;
         removeChildNodes(pokemonContainer)
         fetchPokemons(offset, limit);
@@ -15,25 +15,29 @@ previous.addEventListener("click", () => {
 })
 
 next.addEventListener("click", () => {
-    if(offset < 145){
+    if(offset < 251){
         offset += 9;
+        console.log(offset)
         removeChildNodes(pokemonContainer)
         fetchPokemons(offset, limit);
     }
     })
 
 const fetchPokemon = async (id) => {
-    if (id < 152){
+    if(id <= 251){
+
         try{
             const url = `https://pokeapi.co/api/v2/pokemon/${id}/`;
             const res = await fetch(url);
             const datos = await res.json();
-            const poke =  createPokemon(datos)
+            const poke = createPokemon(datos)
         } catch(err) {
             console.log(err)
         }
     }
-  };
+}
+
+
 
 const fetchPokemons = async (offset, limit) => {
     for (let i = offset; i <= offset + limit; i++){
@@ -60,6 +64,7 @@ function createPokemon(pokemon){
     const name = document.createElement('p');
     name.classList.add('name');
     name.textContent = pokemon.name;
+
 
     card.appendChild(spriteContainer);
     card.appendChild(number);
