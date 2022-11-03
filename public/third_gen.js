@@ -3,11 +3,11 @@ const previous = document.querySelector('#previous')
 const next = document.querySelector('#next')
 
 
-let offset = 152
+let offset = 252
 let limit = 8
 
 previous.addEventListener("click", () => {
-    if(offset != 152){
+    if(offset != 252){
         offset -= 9;
         removeChildNodes(pokemonContainer)
         fetchPokemons(offset, limit);
@@ -15,7 +15,7 @@ previous.addEventListener("click", () => {
 })
 
 next.addEventListener("click", () => {
-    if(offset < 251){
+    if(offset < 378){
         offset += 9;
         console.log(offset)
         removeChildNodes(pokemonContainer)
@@ -24,7 +24,7 @@ next.addEventListener("click", () => {
     })
 
 const fetchPokemon = async (id) => {
-    if(id <= 251){
+    if(id <= 386){
         try{
             const url = `https://pokeapi.co/api/v2/pokemon/${id}/`;
             const res = await fetch(url);
