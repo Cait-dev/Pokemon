@@ -6,6 +6,7 @@ const next = document.querySelector('#next')
 let offset = 1
 let limit = 8
 
+
 previous.addEventListener("click", () => {
     if(offset != 1){
         offset -= 9;
@@ -41,6 +42,7 @@ const fetchPokemons = async (offset, limit) => {
     }
 }
 
+
 function createPokemon(pokemon){
     const card = document.createElement('div');
     card.classList.add('pokemon-block');
@@ -61,9 +63,15 @@ function createPokemon(pokemon){
     name.classList.add('name');
     name.textContent = pokemon.name;
 
+    const types = document.createElement('p');
+    types.classList.add('types');
+    types.innerText = `Tipo: ${pokemon.types[0].type.name}`;
+
     card.appendChild(spriteContainer);
     card.appendChild(number);
     card.appendChild(name);
+    card.appendChild(types);
+
 
     pokemonContainer.appendChild(card);
 
