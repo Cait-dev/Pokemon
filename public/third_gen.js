@@ -68,6 +68,7 @@ function createPokemon(pokemon){
     types.classList.add('types');
     types.innerText = `Tipo: ${pokemon.types[0].type.name}`;
 
+
     card.appendChild(spriteContainer);
     card.appendChild(number);
     card.appendChild(name);

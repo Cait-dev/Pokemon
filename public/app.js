@@ -65,7 +65,8 @@ function createPokemon(pokemon){
 
     const types = document.createElement('p');
     types.classList.add('types');
-    types.innerText = `Tipo: ${pokemon.types[0].type.name}`;
+    types.innerText = `Type: ${pokemon.types[0].type.name}`;
+    
 
     card.appendChild(spriteContainer);
     card.appendChild(number);
